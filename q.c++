@@ -77,7 +77,7 @@ string decodeHuffman(Node* root, const string& encodedData) {
 
 int main() {
     string data = "hello huffman";
-    cout << "متن ورودی: " << data << endl;
+    cout << "input Enter: " << data << endl;
 
 
     unordered_map<char, int> freqMap;
@@ -93,7 +93,7 @@ int main() {
     generateHuffmanCodes(root, "", huffmanCodes);
 
 
-    cout << "کدهای هافمن:" << endl;
+    cout << "huffman code:" << endl;
     for (const auto& pair : huffmanCodes) {
         cout << pair.first << ": " << pair.second << endl;
     }
@@ -104,11 +104,11 @@ int main() {
         encodedData += huffmanCodes[ch];
     }
 
-    cout << "داده‌های کدگذاری شده: " << encodedData << endl;
+    cout << "this is the data coding : " << encodedData << endl;
 
 
     string decodedData = decodeHuffman(root, encodedData);
-    cout << "داده‌های رمزگشایی شده: " << decodedData << endl;
+    cout << "data about the huffman: " << decodedData << endl;
 
     return 0;
 }
